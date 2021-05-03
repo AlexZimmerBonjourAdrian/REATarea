@@ -1,0 +1,23 @@
+<a [routerLink]="['/comidas']">
+    Comidas
+     <hr>
+     
+     <h1>{{titulo}}</h1>
+     <h2>Mi comida Favorita es:
+     {{comidas[miComidaFavorita]}}</h2>
+     
+     
+     
+     <ul>
+     <li *ngFor="let x of comidas">
+         {{x}}
+        </li>
+     </ul> 
+ 
+     <p *ngIf="comidas.length > 3">
+         mas de tres comidas en la lista!
+     </p>
+     <router-outlet></router-outlet>
+ 
+ 
+     
